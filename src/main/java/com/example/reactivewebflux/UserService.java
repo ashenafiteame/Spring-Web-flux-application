@@ -22,7 +22,7 @@ public class UserService {
     private final ReactiveMongoTemplate reactiveMongoTemplate;
     private final UserRepository userRepository;
 
-    private Mono<User> createUser(User user){
+    public Mono<User> createUser(User user){
         return userRepository.save(user);
     }
     public Flux<User> getAllUsers(){
